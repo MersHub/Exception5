@@ -47,11 +47,18 @@ public class Main {
 
         boolean b = matcher1.matches();
 
+        if (b == true )
+            System.out.println("Password : " + matcher1.matches());
+        else
+            throw new WrongPasswordException("WrongPasswordException");
+
         if((password.equals(confirmPassword)))
             System.out.println("Password: " + matcher1.matches());
 
         else {
             throw new WrongPasswordException("WrongPasswordException");
         }
+
+
     }
 }
